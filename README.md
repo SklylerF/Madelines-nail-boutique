@@ -1,1 +1,1 @@
-# project-2
+# Madelin's Nail Boutique
