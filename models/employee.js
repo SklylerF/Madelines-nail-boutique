@@ -2,23 +2,22 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 const randomNumber = () => {
-    return Math.floor(Math.random() * 100000000);
+    return Math.floor(Math.random() * 100000);
 };
-
 class Employee extends Model {}
 
 Employee.init(
     {
         id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             defaultValue: () => {
                 return randomNumber();
             },
-            allowNull: false,
+            primaryKey: true,
         },
         name: {
             type: DataTypes.STRING,
-            primaryKey: true,
             allowNull: false,
         },
     },

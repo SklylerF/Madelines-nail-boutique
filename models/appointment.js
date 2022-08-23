@@ -1,6 +1,6 @@
 //still working on connection the appointments to the employees name ---------------------------------------
 
-const { UUIDV4, Model, DataTypes } = require(`sequelize`);
+const { Model, DataTypes } = require(`sequelize`);
 const sequelize = require(`../config/connection`);
 
 class Appointment extends Model {}
@@ -13,17 +13,10 @@ Appointment.init(
     {
         id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-        },
-
-        appointment_number: {
-            primaryKey: true,
-            type: DataTypes.INTEGER,
             defaultValue: () => {
                 return randomNumber();
             },
+            primaryKey: true,
         },
         customer_name: {
             type: DataTypes.STRING,
@@ -35,6 +28,7 @@ Appointment.init(
             validate: {
                 notNull: true,
                 isNumeric: true,
+                len: [10, 10],
             },
         },
         customer_email: {
@@ -42,14 +36,21 @@ Appointment.init(
             allowNull: true,
             validate: {
                 isEmail: true,
-                len: [10, 10],
             },
         },
-        employee_name: {
+        service_requested: {
             type: DataTypes.STRING,
+            allowNull: true, //=====================CHANGE THIS BACK TO FALSE ONCE SERVICES ARE DONE
+        },
+        questions: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        employee_id: {
+            type: DataTypes.INTEGER,
             references: {
                 model: `employee`,
-                key: `name`,
+                key: `id`,
             },
         },
     },
