@@ -1,13 +1,13 @@
-// const Employee = require(`./employee`);
-// const Appointment = require(`./appointment`);
+const Employee = require(`./employee`);
+const Appointment = require(`./appointment`);
 
-// Employee.hasOne(Appointment, {
-//     foreignKey: `employee_id`,
-//     onDelete: `CASCADE`,
-// });
+Employee.hasOne(Appointment, {
+    foreignKey: `employee_name`,
+    onDelete: `CASCADE`,
+});
 
-// Appointment.belongsTo(Employee, {
-//     foreignKey: `employee_id`,
-// });
+Appointment.belongsTo(Employee, {
+    foreignKey: `employee_name`,
+});
 
-// module.exports = { Employee, Appointment };
+module.exports = { Employee, Appointment };
