@@ -6,7 +6,7 @@ const sequelize = require(`../config/connection`);
 class Appointment extends Model {}
 
 const randomNumber = () => {
-    return Math.floor(Math.random() * 1000000);
+    return Math.floor(Math.random() * 1000000000);
 };
 
 Appointment.init(
@@ -17,6 +17,10 @@ Appointment.init(
                 return randomNumber();
             },
             primaryKey: true,
+        },
+        appointment_date: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         customer_name: {
             type: DataTypes.STRING,
@@ -45,13 +49,6 @@ Appointment.init(
         questions: {
             type: DataTypes.STRING,
             allowNull: true,
-        },
-        employee_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: `employee`,
-                key: `id`,
-            },
         },
     },
     {
