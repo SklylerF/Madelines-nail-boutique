@@ -1,4 +1,6 @@
 node_modules
 .env
 DS_Store
-.eslintrc.js
+.eslintcache
+.eslint-release-info.json
+.temp-eslintcache
