@@ -3,18 +3,13 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "handlebars": "^4.7.7",
-<<<<<<< HEAD
     "materialize-css": "^1.0.0-rc.2",
-=======
    "mysql2": "^2.3.3",
     "sequelize": "^6.21.4"
   },
   "devDependencies": {
-    "eslint": "^8.22.0"
-
->>>>>>> 57a159e22971e86439da0248bda19670b54e8748
+    "eslint": "^8.22.0",
     "mysql2": "^2.2.1",
     "sequelize": "^6.3.5"
-
   }
 }
