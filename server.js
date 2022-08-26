@@ -8,11 +8,10 @@ const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-=======
+
 
 const express =  require('express');
 const app = express();
-const expbs = require('express-handlebars')
 const path = require('path');
 
 app.engine('handlebars', epbs({
@@ -58,7 +57,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'public')));
-=======
+
 // app.use(express.static(path.join(__dirname, "public")));
 
 
