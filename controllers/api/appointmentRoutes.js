@@ -1,5 +1,5 @@
 const router = require(`express`).Router();
-const { Employee, Appointment } = require(`../../models`);
+const Appointment = require("../../models/appointment");
 
 //GETTIN ALL APPOINMENTS
 router.get(`/`, async (req, res) => {
@@ -38,4 +38,44 @@ router.post(`/`, async (req, res) => {
     }
 });
 
+//Send a request yo update an appointment
+router.put(`/:id`, async (req, res) => {
+    try {
+        const updateAppointment = await Appointment.update(
+            {
+                username: req.body.username,
+                password: req.body.password,
+            },
+            {
+                where: {
+                    id: req.params.id,
+                },
+            }
+        );
+        if (!updateAppointment) {
+            res.status(404).json({ message: `Couldn't Update Appointment` });
+            return;
+        }
+        res.status(200).json(updateAppointment);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+//delete your apppoinmet
+router.delete(`/:id`, async (req, res) => {
+    try {
+        const deleteAppointment = await Appointment.destroy({
+            where: {
+                id: req.params.id,
+            },
+        });
+        if (!deleteAppointment) {
+            res.status(404).json({ message: `Couldn't Delete Appointment` });
+            return;
+        }
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 module.exports = router;

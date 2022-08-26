@@ -1,17 +1,15 @@
 /* eslint-disable no-undef */
-const router = require('express').Router();
-const managerHomePage = require('../utils/auth')
+const router = require("express").Router();
+const managerHomePage = require("../utils/auth");
 
-
-
-router.get('/',managerHomePage,(req, res) => {
+router.get("/", managerHomePage, (req, res) => {
     try {
-      res.render('homePage', { 
-  logged_in: req.session.logged_in         
-      });
+        res.render("homePage", {
+            logged_in: req.session.logged_in,
+        });
     } catch (err) {
-      res.status(500).json(err);
+        res.status(500).json(err);
     }
-  });
+});
 
-  module.exports = router;
+module.exports = router;

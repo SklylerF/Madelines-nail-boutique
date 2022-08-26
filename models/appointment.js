@@ -1,7 +1,6 @@
 //still working on connection the appointments to the employees name ---------------------------------------
-
 const { Model, DataTypes } = require(`sequelize`);
-const sequelize = require(`../config/connection`);
+const sequelize = require("../config/connection");
 
 class Appointment extends Model {}
 
@@ -45,13 +44,6 @@ Appointment.init(
         questions: {
             type: DataTypes.STRING,
             allowNull: true,
-        },
-        employee_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: `employee`,
-                key: `id`,
-            },
         },
     },
     {
