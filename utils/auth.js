@@ -10,8 +10,8 @@ const managerHomePage = (req, res, next) => {
 };
 
 const withAuth = (req, res, next) => {
-    if (!req.session.logged_in) {
-        res.redirect("/manager-login");
+    if (req.session.logged_in) {
+        res.redirect("admin_login");
     } else {
         next();
     }
