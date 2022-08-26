@@ -10,10 +10,7 @@
     "sequelize": "^6.21.4"
   },
   "devDependencies": {
-    "eslint": "^8.22.0"
-
->>>>>>> 57a159e22971e86439da0248bda19670b54e8748
-    "mysql2": "^2.2.1",
+    "eslint": "^8.22.0",
     "sequelize": "^6.3.5"
 
   }
