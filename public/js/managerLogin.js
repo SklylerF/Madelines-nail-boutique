@@ -5,7 +5,7 @@ const loginFormHandler = async (event) => {
     const password = document.querySelector("#password").value.trim();
   
     if (username && password) {
-      const response = await fetch("/manager-login", {
+      const response = await fetch("/manager-login/login", {
         method: "POST",
         body: JSON.stringify({ username, password }),
         headers: { "Content-Type": "application/json" }
@@ -21,8 +21,8 @@ const loginFormHandler = async (event) => {
   };
 
   const logout = async () => {
-    const response = await fetch("/manager-login", {
-      method: "DELETE",
+    const response = await fetch("/manager-login/logout", {
+      method: "POST",
       headers: { "Content-Type": "application/json" }
     });
   

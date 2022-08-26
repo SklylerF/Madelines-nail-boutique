@@ -1,5 +1,8 @@
 /* eslint-disable no-undef */
 const router = require('express').Router();
+const { Admin } = require(`../../models`);
+
+
 
 
 router.get("/", (req, res) => {
@@ -14,8 +17,8 @@ router.get("/", (req, res) => {
 
   router.post("/login", async (req, res) => {
     try {
-      const userData = await Employee.findOne({
-        where: { username: req.body.username }
+      const userData = await Admin.findOne({
+        where: { user_name: req.body.username }
       });
   
       if (!userData) {
@@ -42,6 +45,17 @@ router.get("/", (req, res) => {
       });
     } catch (err) {
       res.status(400).json(err);
+    }
+  });
+
+  router.post('/logout', (req, res) => {
+    if (req.session.logged_in) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+      res.redirect('/home')
+    } else {
+      res.status(404).end();
     }
   });
 
