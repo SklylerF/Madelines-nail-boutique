@@ -9,9 +9,9 @@ app.engine('handlebars', epbs({
     layoutDir: path.join(_dirname, 'views/mainLayout')
 }));
 
-const path = require("path");
 
-const express = require("express");
+
+
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 const helpers = require("./utils/helpers");
@@ -35,4 +35,5 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log("Now listening"));
 });
+
 
