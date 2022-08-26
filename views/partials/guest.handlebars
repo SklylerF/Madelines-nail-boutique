@@ -1,17 +1,16 @@
- 
 <div class="appoint-container">
     <div class="card-header col-md-10">
-        <h2> 
-        Appointment Date
+        <h2>
+            Appointment Date
         </h2>
     </div>
-        {{name as |name|}}
-        <div class="name col-md-5">
-            <p>
-                {{name.id}}
-                {{name.name_name}}
-            </p>
-        </div>
+    {{name as |name|}}
+    <div class="name col-md-5">
+        <p>
+            {{name.id}}
+            {{name.name_name}}
+        </p>
+    </div>
     <div class="col-md-7">
         <p>
             date:
@@ -20,20 +19,20 @@
     </div>
     <div class="col-md-7">
         <p>
-           time:
+            time:
             {{time.guest_name}}
-        </p>    
+        </p>
     </div>
-     <div class="col-md-7">
+    <div class="col-md-7">
         <p>
             type of service:
             {{service.guest_name}}
         </p>
         <br />
         <form class="additional-request">
-         <div class="col-md-7">
-            <p>
-           <textarea id='description' name='description' rows='5' cols='30'>
+            <div class="col-md-7">
+                <p>
+                    <textarea id='description' name='description' rows='5' cols='30'>
             {{description}}
             </p>
             </form>
@@ -46,5 +45,9 @@
                 <script src="/js/logout.js"></script>
                 {{/if}}
      </div>
-    
+    <footer>
+        <div>
+    <button>admin login</button>
+</div>
+    </footer>
 </div>
