@@ -1,4 +1,11 @@
-const router = require("express").Router();
+const router = require('express').Router();
+const homeRoutes = require('./homeRoutes');
+const managerLogin = require('./loginRoutes')
+
+router.use('/home', homeRoutes);
+router.use('/manager-login', managerLogin);
+
+
 const homeRoutes = require("./homeRoutes");
 const managerLogin = require("./loginRoutes");
 
