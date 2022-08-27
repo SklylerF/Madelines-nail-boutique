@@ -1,7 +1,8 @@
 const router = require(`express`).Router();
-const { response } = require("express");
 const Admin = require(`../../models/admin`);
+const Appointment = require(`../../models/appointment`);
 
+//getting all admin's allowed for admin logins
 router.get(`/`, async (req, res) => {
   try {
     const adminData = await Admin.findAll();
@@ -79,4 +80,23 @@ router.delete(`/:id`, async (req, res) => {
     res.status(500).send(`Sorry Something Went Wrong`);
   }
 });
+
+router.get(`/appointments`, async (req, res) => {
+  try {
+    const appointmentData = await Appointment.findAll();
+    const appointments = appointmentData.get({ plain: true });
+    return res.render("admin_appointment", appointments);
+  } catch (err) {}
+});
+
+//Getting appointment by their single ID
+// router.get(`/appoinments/:id`, async (req, res) => {
+//   try {
+//     const appointmentId = await Appointment.findByPk(req.params.id);
+//     const appointment = appointmentId.get({ plain: true });
+//     return res.render("appointment", appointment);
+//   } catch (err) {
+//     res.render("400");
+//   }
+// });
 module.exports = router;
