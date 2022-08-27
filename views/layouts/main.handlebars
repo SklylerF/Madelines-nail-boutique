@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,27 @@
     <title>Madeline's Nail Boutique</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styles.css">
-    <script src="../../public/js/requestAppt.js" defer></script> 
 </head>
+
 <body>
     <header class="header">
-        <a href="/home"><h1 class="madeline_title">Madeline's Nail Boutique</h1></a>
-        <a class="make_appointment_link" href="/home/requestappt">Make An Appointment</a>
-    </header>    
-    
+        <a href="/home">
+            <h1 class="madeline_title">Madeline's Nail Boutique</h1>
+        </a>
+        <div>
+            <a class="make_appointment_link" href="/home/requestappt">Make An Appointment</a>
+            <a href="/home/admin/login" class="admin_login_link">Admin Login</a>
+        </div>
+    </header>
+
     {{{ body }}}
 
     <footer class="footer">
         <a href="/home/requestappt" class="make_appointment_link_two">Make An Appointment</a>
         <a href="/home/admin/login" class="admin_login_link">Admin Login</a>
-    </footer>     
+    </footer>   
+        <p>PLACE HOLDER</p>
+    </footer>
+    <script src="../../public/js/requestAppt.js"></script>
 </body>
 </html>
