@@ -78,4 +78,25 @@ router.delete(`/:id`, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get(`/admin/appointment`, async (req, res) => {
+  try {
+    const appointmentData = await Appointment.findAll();
+    const appointments = appointmentData.map((appointment) => {
+      appointment.get({ plain: true });
+    });
+    return res.render("admin_appointments", appointments);
+  } catch (err) {
+    res.status(500).send(`Sorry Something Went Wrong`);
+  }
+});
+
+router.get(`/requestappt`, (req, res) => {
+  try {
+    res.render("requestappt");
+  } catch (err) {
+    res.status(500).send(`Sorry Something Went Wrong`);
+  }
+});
+
 module.exports = router;

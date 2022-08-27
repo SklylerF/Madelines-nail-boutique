@@ -17,9 +17,20 @@ Appointment.init(
       },
       primaryKey: true,
     },
-    customer_name: {
+    first_name: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    customer_email: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        isEmail: true,
+      },
     },
     customer_phone: {
       type: DataTypes.NUMERIC,
@@ -28,13 +39,6 @@ Appointment.init(
         notNull: true,
         isNumeric: true,
         len: [10, 10],
-      },
-    },
-    customer_email: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      validate: {
-        isEmail: true,
       },
     },
     service_requested: {
