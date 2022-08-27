@@ -1,15 +1,19 @@
 /* eslint-disable no-undef */
 const router = require("express").Router();
-const managerHomePage = require("../utils/auth");
+const { withAuth, managerHomePage } = require("../utils/auth");
+const Appointment = require("../models/appointment");
 
-router.get("/", managerHomePage, (req, res) => {
-  try {
-    res.render("homepage", {
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+router.get("/", withAuth, async (req, res) => {
+  res.render(`homepage`);
+});
+
+router.get(`/appointment`, async (req, res) => {
+  return res.render(`make_appointment`);
+});
+
+//get the login page with /admin/login
+router.get(`/admin/login`, (req, res) => {
+  return res.render(`admin_login`);
 });
 
 module.exports = router;

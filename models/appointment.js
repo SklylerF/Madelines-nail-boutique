@@ -1,7 +1,6 @@
 //still working on connection the appointments to the employees name ---------------------------------------
 const { Model, DataTypes } = require(`sequelize`);
 const sequelize = require("../config/connection");
-const bcrypt = require;
 
 class Appointment extends Model {}
 
