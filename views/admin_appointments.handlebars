@@ -1,0 +1,12 @@
+<div class="appointment_container">
+  <h1 class="appointment_header">Appointments</h1>
+  <div class="appointment_container">
+   {{#each appointments as |appointment|}}
+    <div class="appointment col-md-5">
+      <p>
+        {{appointment}}
+      </p>
+    </div> 
+    {{/each}}
+  </div>  
+</div>
