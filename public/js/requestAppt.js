@@ -1,5 +1,4 @@
-const flatpickr = require("flatpickr");
-const bootstrap = require("bootstrap");
+import flatpickr from "flatpickr";
 const calendar = document.querySelector(".calendar_input");
 
 flatpickr(calendar, {
@@ -12,16 +11,16 @@ flatpickr(calendar, {
   wrap: true,
 });
 
-const requestAppointmentFormHandeler = async (event) => {
-  event.preventDefault();
+// const requestAppointmentFormHandeler = async (event) => {
+//   event.preventDefault();
 
-  const fName = document.querySelector("#Fname");
-  const lName = document.querySelector("#Lname");
-  const email = document.querySelector("#email");
-  const phone = document.querySelector("#Phone");
-  const apptTimeDate = document.querySelector("#date-time");
-  const pictures = document.querySelector("#Pictures");
-  const textArea = document.querySelector("#Description");
-};
+//   const fName = document.querySelector("#Fname");
+//   const lName = document.querySelector("#Lname");
+//   const email = document.querySelector("#email");
+//   const phone = document.querySelector("#Phone");
+//   const apptTimeDate = document.querySelector("#date-time");
+//   const pictures = document.querySelector("#Pictures");
+//   const textArea = document.querySelector("#Description");
+// };
 
-document.querySelector(".requestApptForm").addEventListener("submit", requestAppointmentFormHandeler);
+// document.querySelector(".requestApptForm").addEventListener("submit", requestAppointmentFormHandeler);
