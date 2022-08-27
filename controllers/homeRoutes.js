@@ -10,7 +10,6 @@ router.get("/", async (req, res) => {
       gallery.get({ plain: true });
     });
     res.render("homepage", galleries);
-    // res.render(galleries);
   } catch (err) {
     res.status(500).send(err);
   }
