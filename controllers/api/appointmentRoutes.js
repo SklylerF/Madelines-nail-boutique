@@ -91,4 +91,12 @@ router.get(`/admin/appointment`, async (req, res) => {
   }
 });
 
+router.get(`/requestappt`, (req, res) => {
+  try {
+    res.render("requestappt");
+  } catch (err) {
+    res.status(500).send(`Sorry Something Went Wrong`);
+  }
+});
+
 module.exports = router;

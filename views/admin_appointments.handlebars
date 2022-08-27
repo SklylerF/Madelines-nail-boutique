@@ -4,8 +4,22 @@
    {{#each appointments as |appointment|}}
     <div class="appointment col-md-5">
       <p>
-        {{appointment}}
+        {{appointment.first_name}}
       </p>
+        {{appointment.last_name}}
+       </p>
+       <p>
+        {{appointment.customer_phone}}
+        </p>
+        <p>
+        {{appointment.customer_email}}
+        </p>
+        <p>
+        {{appointment.service_requested}}
+        </p>
+        <p>
+        {{appointment.questions}}
+        </p>  
     </div> 
     {{/each}}
   </div>  
