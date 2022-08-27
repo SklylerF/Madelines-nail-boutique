@@ -1,0 +1,69 @@
+<<<<<<< HEAD:views/partials/guest.handlebars
+ 
+    <div class="card-header col-md-10">
+      
+    </div>
+     
+
+        <div class="name col-md-5">
+            <p>
+                {{first.name}} {{last.name}}
+                {{email}}
+                {{phonenumber}}
+            </p>
+        </div>
+=======
+<div class="appoint-container">
+    <div class="card-header col-md-10">
+        <h2>
+            Appointment Date
+        </h2>
+    </div>
+    {{name as |name|}}
+    <div class="name col-md-5">
+        <p>
+            {{name.id}}
+            {{name.name_name}}
+        </p>
+    </div>
+    <div class="col-md-7"
+        <p>
+            date:
+            {{date.guest_name}}
+        </p>
+    </div>
+j    <div class="col-md-7">
+        <p>
+            time:
+            {{time.guest_name}}
+        </p>
+    </div>
+    <div class="col-md-7"
+        <p>
+            type of service:
+            {{service.guest_name}}
+        </p>
+        <br />
+>>>>>>> origin:views/guest.handlebars
+        <form class="additional-request">
+            <div class="col-md-7">
+                <p>
+                    <textarea id='description' name='description' rows='5' cols='30'>
+            {{description}}
+            </p>
+            </form>
+         </div>
+         <br />
+          <button type='submit' value='Submit'>
+            submit
+          </button>
+            {{#if logged_in}}
+                <script src="/js/logout.js"></script>
+                {{/if}}
+     </div>
+    <footer>
+        <div>
+        <button>Admin Log in</button>
+    </div>
+    </footer>
+</div>
