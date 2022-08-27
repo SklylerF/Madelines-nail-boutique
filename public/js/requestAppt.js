@@ -1,15 +1,13 @@
-const flatpickr = require("flatpickr");
-const bootstrap = require("bootstrap");
-const calendar = document.querySelector(".calendar_input");
+const appointmentCalendar = document.querySelector(".flatpickr");
 
-flatpickr(calendar, {
-  enableTime: true,
-  dateFormat: "m-d-Y H:i",
-  minDate: "today",
-  maxDate: new Date().fp_incr(30), // 30 days from now
-  minTime: "09:30",
-  maxTime: "19:00",
-  wrap: true,
+flatpickr(appointmentCalendar, {
+    enableTime: true,
+    dateFormat: "m-d-Y H:i",
+    minDate: "today",
+    maxDate: new Date().fp_incr(30), // 30 days from now
+    minTime: "09:30",
+    maxTime: "19:00",
+    wrap: true
 });
 
 const requestAppointmentFormHandeler = async (event) => {
