@@ -1,7 +1,6 @@
-import flatpickr from "flatpickr";
-const calendar = document.querySelector(".calendar_input");
+const appointmentCalendar = document.querySelector(".flatpickr");
 
-flatpickr(calendar, {
+flatpickr(appointmentCalendar, {
   enableTime: true,
   dateFormat: "m-d-Y H:i",
   minDate: "today",
