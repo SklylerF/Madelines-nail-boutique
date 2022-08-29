@@ -1,8 +1,8 @@
+
+
+
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: system-ui;
+    
     background-color: rgba(255, 218, 185, 0.621);
 }
 
@@ -68,15 +68,7 @@ input {
     margin-left: 20px;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-    padding-bottom: 70px;
-    padding-top: 25px;
-    background-color: pink;
-}
+
 
 .make_appointment_link_two,
 .admin_login_link {

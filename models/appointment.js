@@ -25,6 +25,11 @@ Appointment.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    appointment_time: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      
+    },
     customer_email: {
       type: DataTypes.STRING,
       allowNull: true,
@@ -44,6 +49,9 @@ Appointment.init(
     service_requested: {
       type: DataTypes.STRING,
       allowNull: true, //=====================CHANGE THIS BACK TO FALSE ONCE SERVICES ARE DONE
+    },
+    picture: {
+      type: DataTypes.STRING,
     },
     questions: {
       type: DataTypes.STRING,
