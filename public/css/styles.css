@@ -62,9 +62,17 @@ footer {
     padding: 29px;
     border-radius: 80px;
     width: 640px;
-    transform: translate(619px, 286px);
+    justify-content: center;
+    align-self: center;
 }
 
+.login_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
 .admin_text {
     text-align: center;
 }

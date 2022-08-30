@@ -5,11 +5,15 @@ const Appointment = require(`../../models/appointment`);
 const withAuth = require(`../../utils/auth`);
 
 //for signing in to render the admin page
-router.get(`/login`, (req, res) => {
-  res.render(`admin_login`);
+router.get(`/`, async (req, res) => {
+  try {
+    const adminData = await Admin.findAll();
+    res.json(adminData);
+  } catch (err) {
+    console.log(err);
+  }
 });
-
-//use to get the login info from the admin/login page andc checking the password
+// use to get the login info from the admin/login page andc checking the password
 router.post("/login", async (req, res) => {
   try {
     const adminData = await Admin.findOne({
@@ -39,13 +43,35 @@ router.post("/login", async (req, res) => {
 router.get(`/appointments`, withAuth, async (req, res) => {
   try {
     const adminAppointments = await Appointment.findAll();
-    if (adminAppointments) {
-      res.status(404).send("NO APPOINTMENTS");
-    }
     const appointments = adminAppointments.map((appointment) => {
-      appointment.get({ plain: true });
-      res.render("admin_appointments", appointments);
+      return appointment.get({ plain: true });
     });
+    console.log(appointments);
+    res.render("admin_appointments", { appointments, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    res.status(500).json({ message: "Something went wrong" });
+  }
+});
+
+router.post(`/`, async (req, res) => {
+  try {
+    const createAdmin = await Admin.create(req.body, {
+      individualHooks: true,
+    });
+    res.status(200).json(createAdmin);
+  } catch (err) {
+    res.status(500).json({ message: "Something went wrong" });
+  }
+});
+
+router.delete(`/:id`, async (req, res) => {
+  try {
+    const deleteAdmin = await Admin.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).json(deleteAdmin);
   } catch (err) {
     res.status(500).json({ message: "Something went wrong" });
   }

@@ -1,26 +1,16 @@
-<div class="appointment_container">
+<div>
   <h1 class="appointment_header">Appointments</h1>
-  <div class="appointment_container">
-   {{#each appointments as |appointment|}}
-    <div class="appointment col-md-5" href="/api/admin/appointments">
-      <p>
-        {{appointment.first_name}}
-      </p>
-        {{appointment.last_name}}
-       </p>
-       <p>
-        {{appointment.customer_phone}}
-        </p>
-        <p>
-        {{appointment.customer_email}}
-        </p>
-        <p>
-        {{appointment.service_requested}}
-        </p>
-        <p>
-        {{appointment.questions}}
-        </p>  
-    </div> 
-    {{/each}}
-  </div>  
+  {{#each appointments as |appointment|}}
+    <div class="appointment_container text-center"> 
+      <p>Appointment Created: {{appointment.createdAt}}</p>
+      <p>First Name: {{appointment.first_name}}</p>
+      <p>Last Name: {{appointment.last_name}}</p>
+      <p>Appointment Time: {{appointment.appointment_time}}</p>
+      <p>Customer Email: {{appointment.customer_email}}</p>
+      <p>Customer Phone: {{appointment.customer_phone}}</p>
+      <p>Services: {{appointment.service_requested}}</p>
+      {{#if appointment.picture}} <img src="{{appointment.picture}}"> {{else}} <p>Picture: None </p> {{/if}}
+      {{#if appointment.questions}} <p>Questions: {{appointment.questions}}</p> {{else}} <p>Questions: None </p> {{/if}}
+    </div>  
+  {{/each}}
 </div>
