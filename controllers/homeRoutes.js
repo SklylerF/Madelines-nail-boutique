@@ -1,34 +1,19 @@
-/* eslint-disable no-undef */
 const router = require("express").Router();
 const Appointment = require("../models/appointment");
-const Gallery = require("../models/gallery");
 
 router.get("/", async (req, res) => {
+  res.render("homePage");
+});
+
+router.get("/requestappt", async (req, res) => {
+  res.render("requestappt");
+});
+
+router.post(`/requestappt`, async (req, res) => {
   try {
-    const galleryData = await Gallery.findAll();
-    const galleries = galleryData.map((gallery) => {
-      gallery.get({ plain: true });
-    });
-    res.render("homepage", galleries);
+    const appointmentData = await Appointment.create(req.body);
   } catch (err) {
-    res.status(500).send(err);
+    res.status(500).send({ message: "Error in creating the appointment please try again or contact administrator" });
   }
 });
-
-router.get(`/requestappt`, (req, res) => {
-  try {
-    res.render("requestappt");
-  } catch (err) {
-    res.status(500).send(`Sorry Something Went Wrong`);
-  }
-});
-router.get(`/appointment`, async (req, res) => {
-  return res.render(`make_appointment`);
-});
-
-//get the login page with /admin/login
-router.get(`/admin/login`, (req, res) => {
-  return res.render(`admin_login`);
-});
-
 module.exports = router;
