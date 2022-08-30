@@ -16,19 +16,40 @@
 </head>
 
 <body>
-  <header class="header">
-        <a href="/">
-            <h1 class="madeline_title">Madeline's Nail Boutique</h1>
-        </a>
-        <div class="navbar_links">
-            <a class="make_appointment_link" href="/requestappt">Make An Appointment</a>
-            <a href="/api/admin/login" class="admin_login_link">Admin Login</a>
-        </div>
-  </header>
+  <header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-scroll header-main ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Madelines Nail Boutique</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/requestappt">Appointments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Footer">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="api/admin/login">Employee Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
     {{{ body }}}
 
-  <footer style="" class="text-center position-absolute w-100 h-80 text-lg-start  text-muted">
+  <footer style="" class="text-center position-absolute w-100 h-80 text-lg-start  text-muted" id="Footer">
 
   <section class="d-flex justify-content-center justify-content-lg-between p-0 border-bottom">
 
