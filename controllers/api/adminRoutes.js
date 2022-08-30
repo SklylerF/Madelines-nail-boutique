@@ -5,8 +5,8 @@ const Appointment = require(`../../models/appointment`);
 const withAuth = require(`../../utils/auth`);
 
 //for signing in to render the admin page
-router.get(`/login`, async (req, res) => {
-  res.render("admin_login");
+router.get(`/login`, (req, res) => {
+  res.render(`admin_login`);
 });
 
 //use to get the login info from the admin/login page andc checking the password

@@ -1,7 +1,21 @@
-<section class="container">
-  <section class="flex-row justify-center">
-    {{#each galleries as |image|}}
-    {{>painting}}
-    {{/each}}
-  </section>
-</section>
+<style>
+  img {
+    margin: 10px;
+  }
+</style>
+
+<div class="row justify-content-center">
+  <div class="col-8 row justify-content-center">
+    <img style="width: 300px" src="/images/image1.jpg" alt="">  
+    <img style="width: 300px" src="/images/image2.jpg" alt="">
+    <img style="width: 300px" src="/images/image3.jpg" alt="">
+  </div>
+    <div class="col-8 row justify-content-center">
+    <img style="width: 300px" src="/images/image4.jpg" alt="">
+    <img style="width: 300px" src="/images/image5.jpg" alt="">
+    <img style="width: 300px" src="/images/image6.jpg" alt=""> 
+  </div>
+  <div class="col-12 row justify-content-center">
+    <img style="width: 300px" src="/images/image7.jpg" alt="">
+  </div>
+</div>

@@ -1,4 +1,4 @@
-const adminLogin = async (event) => {
+const login = async (event) => {
   event.preventDefault();
   // Collect values from the login form
   const username = document.querySelector("#username").value.trim();
@@ -33,6 +33,6 @@ const logout = async () => {
   }
 };
 
-document.querySelector(".input_container").addEventListener("submit", adminLogin);
+document.querySelector(".input_container").addEventListener("submit", login);
 
-document.querySelector("#logoutBtn").addEventListener("click", adminLogout());
+document.querySelector("#logoutBtn").addEventListener("click", logout);
