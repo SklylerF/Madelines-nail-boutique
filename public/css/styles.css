@@ -1,16 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
+html {
+    height: 100%;
+}
 
 body {
-    
+    min-height: 100vh;
     background-color: rgba(255, 218, 185, 0.621);
 }
 
+footer {
+    display: flex;
+    min-height: 50vh;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(244, 240, 236);
+    
+}
+
+.fill{
+    min-width: 100%;
+    width: 100%;
+    background-color: rgb(244, 240, 236);
+
+    
+
+}
+
+.apptCard{
+    background-color: rgb(244, 240, 236);
+
+}
 .header {
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: rgba(255, 192, 226, 0.789);
+}
+
+.title-text {
+    font-size: 100px;
+    font-family: 'Satisfy', serif;
+    color:palevioletred;
+   
 }
 
 .madeline_title {
@@ -98,3 +135,4 @@ a {
     text-decoration: none;
     color: black;
 }
+

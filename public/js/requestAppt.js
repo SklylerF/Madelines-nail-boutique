@@ -27,6 +27,12 @@ const requestAppointmentFormHandeler = async (event) => {
       body: JSON.stringify({ first_name, last_name, customer_email, customer_phone, appointment_time, questions, picture }),
       headers: { 'Content-Type': 'application/json' },
     });
+    if (response.ok) {
+      document.location.replace("/home");
+      alert('Thank your for requesting an appointment.Please make sure to check your emails and text messages. We will contact you shortly.')
+    } else {
+      alert(response.statusText);
+    }
 }};
 
 document.querySelector(".requestApptForm").addEventListener("submit", requestAppointmentFormHandeler);
