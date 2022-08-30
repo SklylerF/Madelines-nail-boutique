@@ -33,6 +33,6 @@ const logout = async () => {
   }
 };
 
-document.querySelector(".login-form").addEventListener("submit", adminLogin);
+document.querySelector(".input_container").addEventListener("submit", adminLogin);
 
 document.querySelector("#logoutBtn").addEventListener("click", adminLogout());

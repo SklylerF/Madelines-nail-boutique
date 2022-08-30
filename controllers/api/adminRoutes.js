@@ -1,6 +1,7 @@
 const router = require(`express`).Router();
 const Admin = require(`../../models/admin`);
 const Appointment = require(`../../models/appointment`);
+
 const withAuth = require(`../../utils/auth`);
 
 //for signing in to render the admin page
@@ -17,7 +18,7 @@ router.post("/login", async (req, res) => {
       },
     });
     if (!adminData) {
-      res.status(404).json({ message: "No Admin Found" });
+      res.status(404).json({ message: "No Admin By That Username Found" });
     }
     const validPassword = await adminData.checkPassword(req.body.password);
     if (!validPassword) {
@@ -32,13 +33,16 @@ router.post("/login", async (req, res) => {
   }
 });
 
-//localhost:3001/api/admin/appoinments
+//localhost:3001/api/admin/appointments
 //if the user is trying to access this website without being logged in it will...
 //redirect them to the home page
 router.get(`/appointments`, withAuth, async (req, res) => {
   try {
-    const adminAppoinments = await Appointment.findAll();
-    const appointments = adminAppoinments.map((appointment) => {
+    const adminAppointments = await Appointment.findAll();
+    if (adminAppointments) {
+      res.status(404).send("NO APPOINTMENTS");
+    }
+    const appointments = adminAppointments.map((appointment) => {
       appointment.get({ plain: true });
       res.render("admin_appointments", appointments);
     });
