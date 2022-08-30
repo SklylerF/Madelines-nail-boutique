@@ -71,9 +71,17 @@ footer {
     padding: 29px;
     border-radius: 80px;
     width: 640px;
-    transform: translate(619px, 286px);
+    justify-content: center;
+    align-self: center;
 }
 
+.login_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
 .admin_text {
     text-align: center;
 }
@@ -140,4 +148,19 @@ a {
 a:hover {
     text-decoration: none;
     color: black;
+}
+
+.appointment_header {
+    margin-top: 10px;
+}
+
+/* appointment containers for the admin to see */
+.appointment_container {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: dashed 1px black;
+}
+
+.appointment_container > * {
+    margin: 5px;
 }

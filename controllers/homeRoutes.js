@@ -27,4 +27,12 @@ router.get(`/requestappt/:id`, async (req, res) => {
   }
 });
 
+router.get(`/login`, (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/api/admin/appointments");
+    return;
+  }
+  res.render("admin_login");
+});
+
 module.exports = router;
