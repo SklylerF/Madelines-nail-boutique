@@ -1,17 +1,18 @@
 const appointmentCalendar = document.querySelector(".flatpickr");
 
 flatpickr(appointmentCalendar, {
-    enableTime: true,
-    dateFormat: "Y-m-d H:i",
-    minDate: "today",
-    maxDate: new Date().fp_incr(30), // 30 days from now
-    minTime: "09:30",
-    maxTime: "19:00",
-    wrap: true
+    
+  enableTime: true,
+  dateFormat: "m-d-Y H:i",
+  minDate: "today",
+  maxDate: new Date().fp_incr(30), // 30 days from now
+  minTime: "09:30",
+  maxTime: "19:00",
+  wrap: true,
 });
 
-const requestAppointmentFormHandeler = async (event) => {
-  event.preventDefault();
+ const requestAppointmentFormHandeler = async (event) => {
+   event.preventDefault();
 
   const first_name = document.querySelector("#Fname").value;
   const last_name = document.querySelector("#Lname").value;
@@ -35,4 +36,5 @@ const requestAppointmentFormHandeler = async (event) => {
     }
 }};
 
-document.querySelector(".requestApptForm").addEventListener("submit", requestAppointmentFormHandeler);
+
+ document.querySelector(".requestApptForm").addEventListener("submit", requestAppointmentFormHandeler);
