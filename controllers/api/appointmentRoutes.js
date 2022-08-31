@@ -1,81 +1,22 @@
-const router = require(`express`).Router();
 const Appointment = require("../../models/appointment");
+const router = require("express").Router();
 
-//GETTIN ALL APPOINMENTS
-router.get(`/`, async (req, res) => {
-  try {
-    const appointmentData = await Appointment.findAll();
-    if (!appointmentData) {
-      res.status(404).json(`No Appoinments Found`);
-      return;
-    }
-    res.status(200).json(appointmentData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-//GETTING APPOINMENTS BY APPOINMENT NUMBER
-router.get(`/:id`, async (req, res) => {
-  try {
-    const appointmentNumber = await Appointment.findByPk(req.params.id);
-    if (!appointmentNumber) {
-      res.status(404).json(`No Appointment Found`);
-    }
-    res.status(200).json(appointmentNumber);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-//POSTING APPOINMENTS TO THE DATABASE
 router.post(`/`, async (req, res) => {
   try {
-    const addAppoinment = await Appointment.create(req.body);
-    res.status(200).json(addAppoinment);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-//Send a request yo update an appointment
-router.put(`/:id`, async (req, res) => {
-  try {
-    const updateAppointment = await Appointment.update(
-      {
-        username: req.body.username,
-        password: req.body.password,
-      },
-      {
-        where: {
-          id: req.params.id,
-        },
-      }
-    );
-    if (!updateAppointment) {
-      res.status(404).json({ message: `Couldn't Update Appointment` });
-      return;
-    }
-    res.status(200).json(updateAppointment);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-//delete your apppoinmet
-router.delete(`/:id`, async (req, res) => {
-  try {
-    const deleteAppointment = await Appointment.destroy({
-      where: {
-        id: req.params.id,
-      },
+    const addAppointment = await Appointment.create({
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      appointment_time: req.body.appointment_time,
+      customer_email: req.body.customer_email,
+      customer_phone: req.body.customer_phone,
+      service_requested: req.body.service_requested,
+      picture: req.body.picture,
+      questions: req.body.questions,
     });
-    if (!deleteAppointment) {
-      res.status(404).json({ message: `Couldn't Delete Appointment` });
-      return;
-    }
+    res.status(200).json(addAppointment);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({ message: "Something Couldn't Create Appointment" });
   }
 });
+
 module.exports = router;

@@ -2,7 +2,11 @@ const { Model, DataTypes } = require(`sequelize`);
 const sequelize = require("../config/connection");
 const bcrypt = require(`bcrypt`);
 
-class Admin extends Model {}
+class Admin extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 
 const randomNumber = () => {
   return Math.floor(Math.random() * 1000000);
