@@ -11,8 +11,8 @@ html {
 
 body {
     min-height: 100vh;
-    background-color: rgba(255, 218, 185, 0.621);
-    padding-top: 80px; 
+    background-image: url("../images/backgroundimage2.jpg");
+    padding-top: 70px; 
 }
 
 footer {
@@ -40,9 +40,10 @@ footer {
 
 
 .title-text {
-    font-size: 100px;
+    font-size: 50px;
     font-family: 'Satisfy', serif;
     color:palevioletred;
+    padding-top: 20px;
    
 }
 
@@ -64,6 +65,7 @@ footer {
     width: 800px;
     justify-content: center;
     align-self: center;
+    border: 3px dotted #8c61b9;
 }
 
 .login_container {
@@ -79,6 +81,7 @@ footer {
 
 input {
     border-radius: 9px;
+    background-color: aliceblue;
 }
 
 
@@ -91,6 +94,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .forgot_password_path {
@@ -114,8 +118,11 @@ input {
 }
 
 #adminEnterBtn {
-    background-color: lightblue;
+    background-color: aliceblue;
     border: 1px solid;
+    border-radius: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .appointment_header {
@@ -149,10 +156,28 @@ a:hover {
 }
 
 .header-main {
-   background-color:palevioletred;
+    background-color: lightpink;
 
 }
 
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+    margin: 200px;
+    border-radius: 50px;
+    justify-content: center;
+    border: 3px dotted burlywood;
+    background-color: lavenderblush;
+    font-family: 'Satisfy', serif;
+}
 
+img {
+    vertical-align: middle;
+    border-style: none;
+    margin: 25px;
+}
 
+.h-75 {
+    height: 75%!important;
+    background-color: lightpink;
+}
 
