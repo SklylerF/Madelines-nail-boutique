@@ -37,7 +37,7 @@ Appointment.init(
       },
     },
     customer_phone: {
-      type: DataTypes.NUMERIC,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         notNull: true,

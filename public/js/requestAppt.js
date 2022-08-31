@@ -13,27 +13,30 @@ flatpickr(appointmentCalendar, {
 const requestAppointmentFormHandler = async (event) => {
   event.preventDefault();
 
-  const first_name = document.querySelector("#Fname").value.trim();
-  const last_name = document.querySelector("#Lname").value.trim();
-  const customer_email = document.querySelector("#email").value.trim();
-  const customer_phone = document.querySelector("#Phone").value.trim();
-  const appointment_time = document.querySelector("#date-time").value.trim();
-  const picture = document.querySelector("#Pictures").value.trim();
-  const questions = document.querySelector("#Description").value.trim();
+  const first_name = document.querySelector("#Fname").value;
+  const last_name = document.querySelector("#Lname").value;
+  const customer_email = document.querySelector("#email").value;
+  const customer_phone = document.querySelector("#Phone").value;
+  const appointment_time = document.querySelector("#date-time").value;
+  const picture = document.querySelector("#Pictures").value;
+  const service_requested = document.querySelector("#service_requested").value;
+  const questions = document.querySelector("#questions").value;
 
-  if (first_name && last_name && customer_email && customer_phone && appointment_time) {
-    const response = await fetch("/requestappt", {
+  console.log(first_name, last_name, customer_email, customer_phone, appointment_time, picture, service_requested, questions);
+
+  if (first_name && last_name && customer_email && customer_phone && appointment_time && service_requested) {
+    const response = await fetch("/api/appointments/", {
       method: "POST",
-      body: JSON.stringify({ first_name, last_name, customer_email, customer_phone, appointment_time, picture, questions }),
+      body: JSON.stringify({ first_name, last_name, appointment_time, customer_email, customer_phone, service_requested }),
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
       document.location.replace("/");
       alert("Thank your for requesting an appointment.Please make sure to check your emails and text messages. We will contact you shortly.");
     } else {
-      alert(response.statusText);
+      alert("Couldn't Create Appointment, Please Try Again");
     }
   }
 };
 
-document.querySelector(".requestApptForm").addEventListener("submit", requestAppointmentFormHandler);
+document.querySelector("#submitApptBtn").addEventListener("click", requestAppointmentFormHandler);
