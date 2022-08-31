@@ -49,10 +49,6 @@ Appointment.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    picture: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
     questions: {
       type: DataTypes.STRING,
       allowNull: true,
