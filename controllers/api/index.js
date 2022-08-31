@@ -1,10 +1,8 @@
 const router = require("express").Router();
 const adminRoutes = require(`./adminRoutes`);
-
-router.get(`/login`, (req, res) => {
-  res.render("requestappt");
-});
+const appointmentRoutes = require(`./appointmentRoutes`);
 
 router.use(`/admin`, adminRoutes);
+router.use(`/appointments`, appointmentRoutes);
 
 module.exports = router;
