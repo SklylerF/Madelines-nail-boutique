@@ -6,7 +6,7 @@ const appointments = [
     last_name: "Cordero",
     appointment_time: "08/02/3000",
     customer_email: "corderoleoncruzp@gmail.com",
-    customer_phone: 9512617553,
+    customer_phone: "9512617553",
     service_requested: "Manicure",
     questions: "none",
   },

@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Appointment = require("../models/appointment");
 
 router.get("/", async (req, res) => {
-  res.render("homePage");
+  res.render("homepage");
 });
 
 router.get("/requestappt", async (req, res) => {
