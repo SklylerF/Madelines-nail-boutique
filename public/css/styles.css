@@ -12,6 +12,7 @@ html {
 body {
     min-height: 100vh;
     background-color: rgba(255, 218, 185, 0.621);
+    padding-top: 80px; 
 }
 
 footer {
@@ -36,14 +37,7 @@ footer {
     background-color: rgb(244, 240, 236);
 
 }
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 192, 226, 0.789);
-    height: 75px;
-}
+
 
 .title-text {
     font-size: 100px;
@@ -60,9 +54,6 @@ footer {
     text-shadow: 0px 1px 10px rgb(40 40 40);
 }
 
-.navbar_links{
-    display: contents;
-}
 
 
 .cards {
@@ -70,7 +61,7 @@ footer {
     background-color: pink;
     padding: 29px;
     border-radius: 80px;
-    width: 640px;
+    width: 800px;
     justify-content: center;
     align-self: center;
 }
@@ -90,15 +81,7 @@ input {
     border-radius: 9px;
 }
 
-.make_appointment_link {
-    font-size: 20px;
-    display: flex;
-    margin-left: auto;
-    margin-right: 40px;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-}
+
 
 .cards input {
     margin: 10px;
@@ -139,6 +122,11 @@ input {
     text-align: center;
 }
 
+.appointment_container {
+    margin-top: 20px;
+    border-bottom: dashed 1px black;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -150,17 +138,21 @@ a:hover {
     color: black;
 }
 
-.appointment_header {
-    margin-top: 10px;
+
+
+.navbar-brand {
+  letter-spacing: 3px;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: 'Satisfy', serif;
+
 }
 
-/* appointment containers for the admin to see */
-.appointment_container {
-    margin-top: 20px;
-    padding-bottom: 10px;
-    border-bottom: dashed 1px black;
+.header-main {
+   background-color:palevioletred;
+
 }
 
-.appointment_container > * {
-    margin: 5px;
-}
+
+
+

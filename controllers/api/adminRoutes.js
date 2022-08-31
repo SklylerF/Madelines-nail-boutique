@@ -21,13 +21,7 @@ router.post("/login", async (req, res) => {
         username: req.body.username,
       },
     });
-    if (!adminData) {
-      res.status(404).json({ message: "No Admin By That Username Found" });
-    }
     const validPassword = await adminData.checkPassword(req.body.password);
-    if (!validPassword) {
-      res.status(404).json({ message: "Invalid Password or Email" });
-    }
     req.session.save(() => {
       req.session.loggedIn = true;
       res.status(200).json({ admin: adminData, message: "Login Successful" });
