@@ -17,7 +17,7 @@ visit us at <a href="https://madelines-nail-boutique.herokuapp.com/"></a>
 
 
 # Example 
- <img  src="../../images/readme0.png" >
+ <img  src="./public/images/readme0.png" >
 <img  src="/images/readme1.png" >
 <img src="/images/readme2.png" >
 <img  src="/images/readme3.png" >
