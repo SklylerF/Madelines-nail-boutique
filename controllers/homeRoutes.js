@@ -18,15 +18,6 @@ router.post(`/requestappt`, async (req, res) => {
   }
 });
 
-router.get(`/requestappt/:id`, async (req, res) => {
-  try {
-    const appointmentData = await Appointment.findByPk(req.params.id);
-    res.status(200).json(appointmentData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 router.get(`/login`, (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/api/admin/appointments");
