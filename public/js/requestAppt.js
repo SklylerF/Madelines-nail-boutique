@@ -18,11 +18,10 @@ const requestAppointmentFormHandler = async (event) => {
   const customer_email = document.querySelector("#email").value;
   const customer_phone = document.querySelector("#Phone").value;
   const appointment_time = document.querySelector("#date-time").value;
-  const picture = document.querySelector("#Pictures").value;
   const service_requested = document.querySelector("#service_requested").value;
   const questions = document.querySelector("#questions").value;
 
-  console.log(first_name, last_name, customer_email, customer_phone, appointment_time, picture, service_requested, questions);
+  console.log(first_name, last_name, customer_email, customer_phone, appointment_time, service_requested, questions);
 
   if (first_name && last_name && customer_email && customer_phone && appointment_time && service_requested) {
     const response = await fetch("/api/appointments/", {
