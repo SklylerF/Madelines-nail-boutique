@@ -28,10 +28,10 @@ visit us at <a href="https://madelines-nail-boutique.herokuapp.com/"></a>
 
 # Contact us at
 github
-<a href="https://github.com/CorderoCruz"></a> 
-<a href="https://github.com/SklylerF"></a> 
-<a href="https://github.com/JMares14"></a> 
-<a href="https://github.com/chris-one"></a> 
+<a href="https://github.com/CorderoCruz">CorderoCruz Github</a> 
+<a href="https://github.com/SklylerF">SkylerF Github</a> 
+<a href="https://github.com/JMares14">JMares14 Github</a> 
+<a href="https://github.com/chris-one">Chris-One Github</a> 
 
 
 # License 
