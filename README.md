@@ -18,13 +18,13 @@ visit us at <a href="https://madelines-nail-boutique.herokuapp.com/"></a>
 
 # Example 
  <img  src="./public/images/readme0.png" >
-<img  src="/images/readme1.png" >
-<img src="/images/readme2.png" >
-<img  src="/images/readme3.png" >
-<img  src="/images/readme4.png" >
-<img  src="/images/readme5.png" >
-<img  src="/images/readme6.png" >
-<img  src="/images/readme7.png" >
+<img  src="./public/images/readme1.png" >
+<img src="./public/images/readme2.png" >
+<img  src="./public/images/readme3.png" >
+<img  src="./public/images/readme4.png" >
+<img  src="./public/images/readme5.png" >
+<img  src="./public/images/readme6.png" >
+<img  src="./public/images/readme7.png" >
 
 # Contact us at
 github
