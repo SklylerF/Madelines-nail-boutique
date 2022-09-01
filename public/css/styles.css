@@ -12,7 +12,7 @@ html {
 body {
     min-height: 100vh;
     background-image: url("../images/backgroundimage2.jpg");
-    padding-top: 175px; 
+    padding-top: 175px;
 }
 
 footer {
@@ -21,23 +21,23 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     background-color: rgb(244, 240, 236);
-    
+
 }
 
 .nav-text {
-font-size: 20px;
+    font-size: 20px;
 }
 
-.fill{
+.fill {
     min-width: 100%;
     width: 100%;
     background-color: rgb(244, 240, 236);
 
-    
+
 
 }
 
-.apptCard{
+.apptCard {
     background-color: rgb(244, 240, 236);
 
 }
@@ -46,9 +46,9 @@ font-size: 20px;
 .title-text {
     font-size: 50px;
     font-family: 'Satisfy', serif;
-    color:palevioletred;
+    color: palevioletred;
     padding-top: 20px;
-   
+
 }
 
 .madeline_title {
@@ -79,6 +79,7 @@ font-size: 20px;
     padding-top: 150px;
     padding-bottom: 150px;
 }
+
 .admin_text {
     text-align: center;
 }
@@ -98,7 +99,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .forgot_password_path {
@@ -152,10 +153,10 @@ a:hover {
 
 
 .navbar-brand {
-  letter-spacing: 3px;
-  font-size: 2rem;
-  font-weight: 500;
-  font-family: 'Satisfy', serif;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Satisfy', serif;
 
 }
 
@@ -164,8 +165,9 @@ a:hover {
 
 }
 
-.reviews, .my-3 {
-    margin-bottom: 1rem!important;
+.reviews,
+.my-3 {
+    margin-bottom: 1rem !important;
     margin: 200px;
     border-radius: 50px;
     justify-content: center;
@@ -177,7 +179,7 @@ a:hover {
 
 
 .h-75 {
-    height: 75%!important;
+    height: 75% !important;
     background-color: lightpink;
 }
 
@@ -213,8 +215,8 @@ a:hover {
     left: -70px;
     top: 17%;
     border-radius: 8px;
-    border-top-left-radius: 0px; 
-    border-bottom-right-radius: 0px; 
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .profile-pic {
@@ -237,6 +239,11 @@ a:hover {
 .close-quotes {
     margin-bottom: 100px;
     margin-right: 60px
+}
+
+.h1,
+h1 {
+    font-size: 2.5rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -270,6 +277,7 @@ a:hover {
         margin-right: 30px
     }
 }
+
 #Reviews {
     font-family: 'Satisfy', serif;
 }
