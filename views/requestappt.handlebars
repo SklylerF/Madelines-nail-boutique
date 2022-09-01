@@ -1,22 +1,7 @@
 
-<div class="container justify-content-center fill  pt-3">
-  <div class="row">
-    <div class="col-md-5 p-3 mb-3 ml-5 ">
-      <img src="/images/71805.jpg" class="img-thumbnail ">
-    </div>
-    <div class="col-md-5">
-      <div class="card h-100 float-right border-0 apptCard" >
-  <div class="card-body">
-    <h5 class="card-title title-text">Ready<br> for that<br> mani-pedi?</h5>
-    <p class="card-text">  </p>
-  </div>
+<div class="row justify-content-center align-center">
+    <h5 class="card-title title-text">Ready For That Manicure?</h5>
 </div>
-
-    </div>
-    
-  </div>
-</div>
-
 <form class="requestApptForm mb-5 ml-3 mr-3 mt-5">
   <div class="form-row justify-content-center mt-4 ml-4 mr-4">
     <div class="col-md-3 mb-5">
@@ -80,32 +65,17 @@
         <i>X</i>
       </a>
     </div>
-    <div class="col-md-3 mb-5">
-      <label for="Pictures">Picture Example (not required)</label>
-      <input type="file" class="form-control-file" id="Pictures" />
-    </div>
   </div>
   <div class="form-row justify-content-center mt-4 ml-4 mr-4" id="questions-text">
-      <label class="" for="DescriptionText">Any questions, requests, or concerns?</label>
-      <textarea class="form-control" id="Description" rows="5"></textarea>
+      <label class="" for="DescriptionText">What Would You Like To Get Done During Your Visit?</label>
+      <textarea class="form-control" id="service_requested" rows="5"></textarea>
+  </div>
+    <div class="form-row justify-content-center mt-4 ml-4 mr-4" id="questions-text">
+      <label class="" for="DescriptionText">Any Questions or Extra Request(s)? (Optional)</label>
+      <textarea class="form-control" id="questions" rows="5"></textarea>
   </div>
   <div class="form-row justify-content-center">
-    <div class="form-check">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        value=""
-        id="invalidCheck2"
-        required
-      />
-      <label class="form-check-label mb-2" for="invalidCheck2">
-        Agree to terms and conditions
-      </label>
-    </div>
-  </div>
-  <div class="form-row justify-content-center">
-  <button class="btn btn-primary " id="submitApptBtn" type="submit">Request
-    Appointment</button>
+  <button class="btn btn-primary " id="submitApptBtn" type="submit">Request Appointment</button>
 </div>  
 </form>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

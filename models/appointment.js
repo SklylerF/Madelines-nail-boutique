@@ -37,7 +37,7 @@ Appointment.init(
       },
     },
     customer_phone: {
-      type: DataTypes.NUMERIC,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         notNull: true,
@@ -48,10 +48,6 @@ Appointment.init(
     service_requested: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    picture: {
-      type: DataTypes.STRING,
-      allowNull: true,
     },
     questions: {
       type: DataTypes.STRING,

@@ -9,7 +9,6 @@
       <p>Customer Email: {{appointment.customer_email}}</p>
       <p>Customer Phone: {{appointment.customer_phone}}</p>
       <p>Services: {{appointment.service_requested}}</p>
-      {{#if appointment.picture}} <img src="{{appointment.picture}}"> {{else}} <p>Picture: None </p> {{/if}}
       {{#if appointment.questions}} <p>Questions: {{appointment.questions}}</p> {{else}} <p>Questions: None </p> {{/if}}
     </div>  
   {{/each}}
