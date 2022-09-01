@@ -1,52 +1,82 @@
-<form class="requestApptForm">
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
+
+<div class="row justify-content-center align-center">
+    <h5 class="card-title title-text">Ready For That Manicure?</h5>
+</div>
+<form class="requestApptForm mb-5 ml-3 mr-3 mt-5">
+  <div class="form-row justify-content-center mt-4 ml-4 mr-4">
+    <div class="col-md-3 mb-5">
       <label for="validationDefault01">First name</label>
-      <input type="text" class="form-control" id="Fname" placeholder="First name" required>
+      <input
+        type="text"
+        class="form-control"
+        id="Fname"
+        placeholder="First name"
+        required
+      />
     </div>
-    <div class="col-md-4 mb-3">
+    <div class="col-md-3 mb-5">
       <label for="validationDefault02">Last name</label>
-      <input type="text" class="form-control" id="Lname" placeholder="Last name" required>
+      <input
+        type="text"
+        class="form-control"
+        id="Lname"
+        placeholder="Last name"
+        required
+      />
     </div>
-    <div class="col-md-4 mb-3">
-      <label for="Email">Email</label>
-      <input type="email" class="form-control" id="email" placeholder="Email" required>
-      </div>
-    </div>
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
+  </div>
+  <div class="form-row justify-content-center mt-4 ml-4 mr-4">
+    <div class="col-md-3 mb-5">
       <label for="Phone">Phone number</label>
-      <input type="text" class="form-control" id="Phone" placeholder="Phone" required>
+      <input
+        type="text"
+        class="form-control"
+        id="Phone"
+        placeholder="Phone"
+        required
+      />
     </div>
-    <div class="flatpickr col-md-4 mb-3">
-      <input type="text"  id= "date-time" placeholder="Select Date.." data-input> <!-- input is mandatory -->
-    
-        <a class="input-button" title="toggle" data-toggle>
-            <i class="icon-calendar"></i>
-        </a>
-    
-        <a class="input-button" title="clear" data-clear>
-            <i class="icon-close"></i>
-        </a>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="Pictures">Picture Example (not required)</label>
-    <input type="file" class="form-control-file" id="Pictures">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <label for="DescriptionText">Any questions, requests, or concerns?</label>
-    <textarea class="form-control" id="Description" rows="3"></textarea>
+    <div class="col-md-3 mb-5">
+      <label for="Email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Email"
+        required
+      />
     </div>
   </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-      <label class="form-check-label" for="invalidCheck2">
-        Agree to terms and conditions
-      </label>
+  <div class="form-row justify-content-center mt-4 ml-4 mr-4">
+    <div class="flatpickr col-md-3 mb-5">
+      <label for="calendar">Please choose time and date</label>
+      <input
+        class="w-75"
+        type="text"
+        id="date-time"
+        placeholder="Select Date.."
+        data-input
+      />
+      <a class="input-button" title="toggle" data-toggle>
+        <i class="fa-regular fa-calendar"></i>
+      </a>
+
+      <a class="input-button" title="clear" data-clear>
+        <i>X</i>
+      </a>
     </div>
   </div>
-  <button class="btn btn-primary" id="submitApptBtn" type="submit">Submit form</button>
+  <div class="form-row justify-content-center mt-4 ml-4 mr-4" id="questions-text">
+      <label class="" for="DescriptionText">What Would You Like To Get Done During Your Visit?</label>
+      <textarea class="form-control" id="service_requested" rows="5"></textarea>
+  </div>
+    <div class="form-row justify-content-center mt-4 ml-4 mr-4" id="questions-text">
+      <label class="" for="DescriptionText">Any Questions or Extra Request(s)? (Optional)</label>
+      <textarea class="form-control" id="questions" rows="5"></textarea>
+  </div>
+  <div class="form-row justify-content-center">
+  <button class="btn btn-primary " id="submitApptBtn" type="submit">Request Appointment</button>
+</div>  
 </form>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="/js/requestAppt.js"></script>
