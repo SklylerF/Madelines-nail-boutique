@@ -241,9 +241,8 @@ a:hover {
     margin-right: 60px
 }
 
-.h1,
-h1 {
-    font-size: 2.5rem;
+h1.appointment_header {
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 600px) {
