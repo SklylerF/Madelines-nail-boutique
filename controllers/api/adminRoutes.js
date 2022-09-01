@@ -32,8 +32,6 @@ router.post("/login", async (req, res) => {
   }
 });
 
-//localhost:3001/api/admin/appointments
-//if the user is trying to access this website without being logged in it will...
 //redirect them to the home page
 router.get(`/appointments`, withAuth, async (req, res) => {
   try {
