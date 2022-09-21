@@ -13,7 +13,8 @@ chris-one - Chris Hernandez
 
 Madelin's Nail Boutique is a platform we created to support a local business with a online full-stack webpage. This webpage displays a small portion of Lucero Garcia's work along with suportive comments from the customers in our examples. The main functionality of this page is to give the Boutique a place to create and display appointments.
 
-visit us at <a href="https://madelines-nail-boutique.herokuapp.com/"></a> 
+visit us at 
+<a href="https://madelines-nail-boutique.herokuapp.com/"></a> 
 
 
 # Example 
